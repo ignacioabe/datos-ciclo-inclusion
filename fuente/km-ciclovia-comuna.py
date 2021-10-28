@@ -13,6 +13,8 @@ dfs = df[df.estado_rec == "Existente"]
 # agrupa las ciclovías por comuna y kilómetros de ciclovías
 tabla = dfs.groupby("comuna")["km"].sum()
 
+# df.groupby(["comuna", "estado_rec"])["km"].sum()
+
 # guarda la tabla en salida/producto-1
 tabla.to_csv("salida/producto-1/km-ciclovia-comuna.csv")
 
